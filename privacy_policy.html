@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — ICT 1110</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --gold: #FFAB00;
+      --gold-light: #FFD04D;
+      --bg: #0d0d0d;
+      --surface: #1a1a1a;
+      --surface2: #222222;
+      --border: #2e2e2e;
+      --text: #e0e0e0;
+      --text-muted: #9e9e9e;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* Tech grid background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 171, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 171, 0, 0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1a1200 0%, #0d0d0d 60%);
+      border-bottom: 2px solid var(--gold);
+      padding: 32px 20px;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--gold-light);
+      border-radius: 2px;
+    }
+
+    .app-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: #000;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+
+    header h1 {
+      font-size: clamp(24px, 5vw, 36px);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+
+    header h1 span {
+      color: var(--gold);
+    }
+
+    header p {
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    /* ── Effective date banner ── */
+    .date-banner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: 6px;
+      padding: 14px 20px;
+      margin-bottom: 36px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .date-banner strong {
+      color: var(--gold);
+    }
+
+    /* ── Sections ── */
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 28px 24px;
+      margin-bottom: 20px;
+      transition: border-color 0.2s;
+    }
+
+    section:hover {
+      border-color: rgba(255, 171, 0, 0.3);
+    }
+
+    section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2 .icon {
+      width: 28px;
+      height: 28px;
+      background: rgba(255, 171, 0, 0.12);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    section p {
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    section p:last-child {
+      margin-bottom: 0;
+    }
+
+    section ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 4px;
+    }
+
+    section ul li {
+      padding: 6px 0 6px 20px;
+      position: relative;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+    }
+
+    section ul li:last-child {
+      border-bottom: none;
+    }
+
+    section ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 12px;
+      top: 8px;
+    }
+
+    /* ── Highlight box ── */
+    .highlight-box {
+      background: rgba(255, 171, 0, 0.07);
+      border: 1px solid rgba(255, 171, 0, 0.2);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-top: 14px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .highlight-box strong {
+      color: var(--gold-light);
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-top: 14px;
+    }
+
+    .contact-card a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-card a:hover {
+      color: var(--gold-light);
+      text-decoration: underline;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 0;
+      font-size: 15px;
+    }
+
+    .contact-row .label {
+      color: var(--text-muted);
+      min-width: 80px;
+      font-size: 13px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    footer span {
+      color: var(--gold);
+    }
+
+    @media (max-width: 480px) {
+      section {
+        padding: 20px 16px;
+      }
+
+      header {
+        padding: 24px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="app-badge">GeorgeBest</div>
+    <h1>Privacy Policy — <span>ICT 1110</span></h1>
+    <p>University of Zambia · First-Year ICT Study App</p>
+  </header>
+
+  <div class="wrapper">
+
+    <div class="date-banner">
+      <strong>Effective Date:</strong> April 23, 2025 &nbsp;·&nbsp;
+      <strong>Last Updated:</strong> April 23, 2025
+    </div>
+
+    <!-- Overview -->
+    <section>
+      <h2><span class="icon">📋</span> Overview</h2>
+      <p>
+        ICT 1110 is an educational Android application developed by <strong>George Best Jr III</strong>
+        (GeorgeBest) to help first-year ICT students at the University of Zambia access quizzes,
+        past tests, exam papers, and recommended books.
+      </p>
+      <p>
+        This Privacy Policy explains what information is collected when you use the app,
+        how it is used, and your rights. By using ICT 1110 you agree to the practices
+        described here.
+      </p>
+    </section>
+
+    <!-- Information We Collect -->
+    <section>
+      <h2><span class="icon">🔍</span> Information We Collect</h2>
+      <p>ICT 1110 does <strong>not</strong> require you to create an account or provide
+         personal information to use the app. No name, email address, or phone number is
+         collected by us directly.</p>
+      <p>The following data may be collected automatically through third-party services:</p>
+      <ul>
+        <li>Device information (model, OS version, language) — collected by Google AdMob for ad delivery</li>
+        <li>Advertising ID (Google AAID) — used to show relevant, non-personalised ads</li>
+        <li>Approximate location (country/region) — inferred by AdMob from IP address for ad targeting</li>
+        <li>App interaction data — aggregated usage statistics via AdMob SDK</li>
+      </ul>
+    </section>
+
+    <!-- How We Use Information -->
+    <section>
+      <h2><span class="icon">⚙️</span> How We Use Information</h2>
+      <p>Any data collected is used solely to:</p>
+      <ul>
+        <li>Display advertisements through Google AdMob to keep the app free</li>
+        <li>Improve ad relevance and measure ad performance</li>
+        <li>Comply with legal obligations</li>
+      </ul>
+      <p>We do not sell, rent, or share your personal information with any third party
+         outside the services described below.</p>
+    </section>
+
+    <!-- Third-Party Services -->
+    <section>
+      <h2><span class="icon">🔗</span> Third-Party Services</h2>
+      <p>ICT 1110 integrates the following third-party SDKs:</p>
+      <ul>
+        <li><strong>Google AdMob</strong> — serves in-app advertisements and may collect device &amp; ad-interaction data</li>
+        <li><strong>URL Launcher</strong> — opens links in your device's browser; no data is collected by us from this</li>
+        <li><strong>Share Plus</strong> — allows you to share content via your device's share sheet; no data is sent to our servers</li>
+      </ul>
+      <div class="highlight-box">
+        <strong>Google AdMob</strong> is governed by Google's Privacy Policy:
+        <a href="https://policies.google.com/privacy" style="color:#FFAB00;" target="_blank" rel="noopener">
+          policies.google.com/privacy
+        </a>. We have no control over the data Google collects through AdMob.
+      </div>
+    </section>
+
+    <!-- Children's Privacy -->
+    <section>
+      <h2><span class="icon">🎓</span> Children's Privacy</h2>
+      <p>
+        ICT 1110 is designed for university students (18 years and older). The app is
+        <strong>not directed at children under the age of 13</strong>. We do not
+        knowingly collect personal information from children. If you believe a child
+        under 13 has used this app and provided personal data, please contact us
+        immediately so we can take appropriate action.
+      </p>
+    </section>
+
+    <!-- Data Storage & Security -->
+    <section>
+      <h2><span class="icon">🔒</span> Data Storage &amp; Security</h2>
+      <p>
+        ICT 1110 does not operate its own backend server. All app content (study
+        materials, quizzes, past papers) is bundled within the app itself and stored
+        locally on your device.
+      </p>
+      <p>
+        No user data is transmitted to or stored on servers owned by the developer.
+        Data handled by third-party SDKs (e.g., AdMob) is subject to their own
+        security and retention policies.
+      </p>
+    </section>
+
+    <!-- Permissions -->
+    <section>
+      <h2><span class="icon">📱</span> App Permissions</h2>
+      <p>ICT 1110 may request the following Android permissions:</p>
+      <ul>
+        <li><strong>INTERNET</strong> — required to load advertisements via AdMob</li>
+        <li><strong>ACCESS_NETWORK_STATE</strong> — checks connectivity before loading ads</li>
+      </ul>
+      <p>No other sensitive permissions (camera, microphone, contacts, location) are requested.</p>
+    </section>
+
+    <!-- Your Rights -->
+    <section>
+      <h2><span class="icon">✅</span> Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Opt out of personalised ads by resetting your Google Advertising ID in your device settings</li>
+        <li>Request information about data collected about you by contacting us</li>
+        <li>Uninstall the app at any time to stop all data collection</li>
+      </ul>
+      <p>To manage Google's ad personalisation settings, visit
+        <a href="https://adssettings.google.com" style="color:#FFAB00;" target="_blank" rel="noopener">
+          adssettings.google.com</a>.
+      </p>
+    </section>
+
+    <!-- Changes -->
+    <section>
+      <h2><span class="icon">🔄</span> Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Any changes will be
+        reflected on this page with a new effective date. Continued use of the app
+        after changes are posted constitutes your acceptance of the updated policy.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2><span class="icon">✉️</span> Contact Us</h2>
+      <p>If you have any questions or concerns about this Privacy Policy, please contact:</p>
+      <div class="contact-card">
+        <div class="contact-row">
+          <span class="label">Developer</span>
+          <strong>George Best Jr III (GeorgeBest)</strong>
+        </div>
+        <div class="contact-row">
+          <span class="label">University</span>
+          <span>University of Zambia (UNZA)</span>
+        </div>
+        <div class="contact-row">
+          <span class="label">Email</span>
+          <a href="mailto:bestx842@gmail.com">bestx842@gmail.com</a>
+        </div>
+        <div class="contact-row">
+          <span class="label">App</span>
+          <span>ICT 1110 — Play Store by GEORGE BEST</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 <span>GEORGE BEST </span> · ICT 1110 · All rights reserved.</p>
+    <p style="margin-top:6px;">Hosted on GitHub Pages</p>
+  </footer>
+
+</body>
+</html>
